@@ -1,0 +1,28 @@
+/* 
+* Utility
+* Very Generic classes that are meant to be extended by your own objects. 
+*/
+
+
+.float-right    { float: right; }
+.float-left     { float: left; }
+img.float-right { margin: 0 0 $margin $margin; }
+img.float-left  { margin: 0 $margin $margin 0;	}
+.align-right    { text-align: right; }
+.align-left     { text-align: left; }
+.align-center   { text-align: center; }
+img.max-width   { width: 100%; height: auto; }
+
+
+.visually-hidden {
+	@include visually-hidden;
+}
+.float-clear {
+	@include float-clear;
+}
+.image-replace {
+	@include image-replace;
+}
+.box-sizing {
+	@include box-sizing(border-box);
+}

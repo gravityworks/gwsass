@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+    background: transparent;
+    color: darken($blue, 20%);
+    &:hover, &:focus {
+    	text-decoration: none;
+    }
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+.inline-block-link {
+	display: inline-block;
+	margin-right: 10px;
+}

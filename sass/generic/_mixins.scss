@@ -1,0 +1,28 @@
+/*
+* Custom Mixins
+*/
+
+@mixin font-size($sizeValue: 1){
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+@mixin image-replace {
+  display: block;
+  text-indent: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@mixin float-clear {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+@mixin visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

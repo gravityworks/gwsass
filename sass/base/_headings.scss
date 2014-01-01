@@ -1,0 +1,35 @@
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	margin: $margin 0;
+}
+
+h1, h2, h3 {	
+	color: #222;
+}
+
+h1, .h1 {
+    @include font-size(28);
+}
+h2, .h2 {
+	@include font-size(24);
+}
+h3, .h3 {
+	@include font-size(20);
+}
+h4, .h4 {
+	@include font-size(18);
+}
+h5, .h5 {
+	@include font-size(16);
+}
+h6, .h6 {
+	@include font-size(14);
+	text-transform: uppercase;
+}
+
+

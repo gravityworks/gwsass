@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;    
+    border: 1px solid #ddd;
+    border-bottom-width: 3px;
+}
+
+thead {
+	
+}
+
+th {
+	font-weight: 700;
+	text-align: left;
+	background-color: darken($blue,14%);
+	color: #fff;
+	border-top: 1px solid darken($blue,10%);
+	border-left: 1px solid darken($blue,10%);
+	border-right: 1px dashed darken($blue,10%);
+	border-bottom: 5px solid darken($blue,10%);
+}
+th[scope="row"] {	
+	border-right: 5px solid darken($blue,10%);	
+	border-bottom: 1px dashed darken($blue,10%);
+}
+
+th,td {
+	line-height: 1.2;
+}
+th {
+	padding: 10px;
+}
+td {
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+}
+tr:nth-child(2n+2) {
+	td {
+		background: #eee;
+	}
+}
