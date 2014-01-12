@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     compass: {
       options: {
-        config: '.compass.rb',
+        config: 'config.rb',
         force: true
       }
     },
