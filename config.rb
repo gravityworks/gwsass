@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
-require 'breakpoint'
-require 'sass-globbing'
+require "breakpoint"
+require "sass-globbing"
 
 # Set this to the root of your project when deployed:
 http_path = "/"
