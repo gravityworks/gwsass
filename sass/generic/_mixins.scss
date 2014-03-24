@@ -6,6 +6,10 @@
   font-size: ($sizeValue) + px;
   font-size: ($sizeValue / 10) + rem;
 }
+@mixin font-smoothing{
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
 @mixin image-replace {
   display: block;
   text-indent: 200%;
