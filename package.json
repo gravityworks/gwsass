@@ -1,12 +1,12 @@
 {
-  "name": "gw-sass",
-  "version": "0.1.1",
+  "name": "gwsass",
+  "version": "0.1.2",
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-watch": "*",
-    "matchdep": "*",
-    "grunt-grunticon": "~1.0.0",
-    "grunt-svgmin": "~0.4.0",
+    "matchdep": "*",   
+    "grunt-svgmin": "~0.4.0",   
+    "grunt-dr-svg-sprites": "~0.5.5"
   }
 }
