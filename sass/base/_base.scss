@@ -23,8 +23,8 @@ body {
     margin: 0;
     line-height: 1.6;
     @include font-size(16);
+    @include font-smoothing;
     color: #444;
     font-family: $font-primary;
-    -webkit-font-smoothing: antialiased;
     background-color: $light;
 }
