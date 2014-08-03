@@ -21,10 +21,7 @@ html {
 
 body {
     margin: 0;
-    line-height: 1.6;
+    line-height: $line-height;
     @include font-size(16);
     @include font-smoothing;
-    color: #444;
-    font-family: $font-primary;
-    background-color: $light;
 }

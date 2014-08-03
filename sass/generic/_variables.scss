@@ -7,20 +7,16 @@
 
 
 /* Sizes */
-$max-width: 1000px;
-$margin: 40px;
+$max-width: 1200px;
+$margin: 80px;
 
 
-/* Fonts */
-$font-primary: 'Droid Sans', sans-serif;
-$font-special: 'Changa One', sans-serif;
+/* Typography */
+
+$line-height: 1.6;
 
 /* Colors */
 
-$red: #D70000;
-$red-brighten: #E71616;
-$orange: #FF4000;
-$blue: #0099FF;
-$purple: #4D4DFF;
-$green: #6CA730;
-$light: #E5E5E5;
+
+/* Breakpoints */
+$mobile: 600px;

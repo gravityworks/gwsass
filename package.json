@@ -1,12 +1,12 @@
 {
   "name": "gwsass",
-  "version": "0.1.2",
-  "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-compass": "*",
-    "grunt-contrib-watch": "*",
-    "matchdep": "*",   
-    "grunt-svgmin": "~0.4.0",   
-    "grunt-dr-svg-sprites": "~0.5.5"
+    "version": "0.1.0",
+    "devDependencies": {
+    "connect-livereload": "^0.4.0",
+    "express": "^4.4.4",
+    "gulp": "^3.8.1",
+    "gulp-compass": "^1.1.9",
+    "gulp-svg-sprites": "^0.1.2",
+    "tiny-lr": "0.0.7"
   }
 }

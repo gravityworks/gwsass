@@ -1,5 +1,4 @@
-/* ==========================================================================
-   Links
+/* Links
    ========================================================================== */
 
 /**
@@ -7,19 +6,7 @@
  */
 
 a {
-    background: transparent;
-    color: darken($blue, 20%);
-    &:hover, &:focus {
-    	text-decoration: none;
-    }
-}
-
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-
-a:focus {
-    outline: thin dotted;
+  background: transparent;
 }
 
 /**
@@ -28,7 +15,7 @@ a:focus {
 
 a:active,
 a:hover {
-    outline: 0;
+  outline: 0;
 }
 
 .inline-block-link {
