@@ -1,7 +1,10 @@
-gwsass
-======
+A starter sass project from Gravity Works.
 
-Getting Started
----------------
-1. Run 'npm install'
-2. Run 'grunt' to start the default watch command.
+# Prereqs
+* Sass (Gem)
+* Compass (Gem)
+* Node
+* Gulp
+
+
+
