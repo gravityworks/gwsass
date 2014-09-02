@@ -14,16 +14,16 @@ img.float-left  { margin: 0 $margin $margin 0; }
 img.max-width   { width: 100%; height: auto; }
 
 
-.visually-hidden {
+.visually-hidden, %visually-hidden {
 	@include visually-hidden;
 }
-.float-clear {
+.float-clear, %float-clear {
 	@include float-clear;
 }
-.image-replace {
+.image-replace, %image-replace {
 	@include image-replace;
 }
-.box-sizing {
+.box-sizing, %box-sizing {
 	@include box-sizing(border-box);
 }
 .single-line, %single-line {
