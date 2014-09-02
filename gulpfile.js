@@ -85,4 +85,4 @@ gulp.task('watch', function() {
 gulp.task('default',['watch']);
 
 // Default Task with Server
-gulp.task('defaultExpress', ['startExpress','startLivereload','watch']);
+gulp.task('serve', ['startExpress','startLivereload','watch']);
