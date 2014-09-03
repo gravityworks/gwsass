@@ -11,8 +11,8 @@
 }
 
 .link-block, %link-block {
-	@extend .float-clear;
-	@extend .plain-list;
+	@extend %float-clear;
+	@extend %plain-list;
 	a {
 		display: block;
 		text-decoration: none;
