@@ -2,7 +2,7 @@
 * List Styles
 */
 
-.plain-list {
+.plain-list, %plain-list {
 	margin: 0;
 	padding: 0;
 	li {
@@ -10,7 +10,7 @@
 	}
 }
 
-.link-block {
+.link-block, %link-block {
 	@extend .float-clear;
 	@extend .plain-list;
 	a {
