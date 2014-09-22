@@ -26,4 +26,27 @@ body {
 }
 ```
 
+## Using The Grid
+The Susy map included uses a 10 column grid, at a max-width of 1200px, with 20px gutters.
+Ex:
+```html
+<div class="container">
+	<div class="main">
+
+	</div>
+	<div class="sidebar">
+
+
+	</div>
+</div>
+```
+```scss
+.main {
+	@include span(7);
+}
+.sidebar {
+	@include span(3);
+}
+```
+
 
