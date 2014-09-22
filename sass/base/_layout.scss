@@ -1,0 +1,7 @@
+.container {
+	@include container($max-width);
+	@extend %float-clear;
+	.container {
+		margin: 0 -20px;
+	}
+}

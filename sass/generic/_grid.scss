@@ -1,0 +1,11 @@
+$susy: (
+	global-box-sizing: border-box,
+	gutter-position: inside-static,
+	column-width: 120px,
+	gutters: 40px/120px,
+	columns: 10,
+	math: fluid,
+	use-custom: (
+		rem: true
+	)
+);

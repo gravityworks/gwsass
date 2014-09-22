@@ -2,6 +2,8 @@ A starter Sass project from Gravity Works.
 
 ## Prereqs
 * Sass (Gem)
+* Sass Globbing (Gem)
+* Susy (Gem)
 * Compass (Gem)
 * Node
 * Gulp
