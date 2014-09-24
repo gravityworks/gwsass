@@ -3,9 +3,9 @@
    ========================================================================== */
 
 * {
-   box-sizing: border-box;
+   @extend %box-sizing;
    &:before, &:after {
-      box-sizing: border-box;
+      @extend %box-sizing;
    }
 }
 
