@@ -44,13 +44,13 @@ Ex:
 .main {
 	@include span(10);
 	@include breakpoint($mobile) {
-		@include span(7);
+		width: span(7);
 	}
 }
 .sidebar {
 	@include span(10);
 	@include breakpoint($mobile) {
-		@include span(3);
+		width: span(3);
 	}
 }
 .content-left,.content-right {
@@ -67,4 +67,11 @@ We can also access just the width values of our grid if we need to fine tune a l
 .sidebar {
 	width: span(3);
 }
+```
+You can also specify a column to float to the right using the 'last' option.
+```scss
+.main {
+	@include span(last 7);
+}
+```
 
