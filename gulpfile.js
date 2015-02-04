@@ -1,6 +1,7 @@
 /* Require Plugins */
 var gulp = require('gulp'),
-    svgSprites = require('gulp-svg-sprites'),
+    svgSprite = require('gulp-svg-sprite'),
+    svg2png = require('gulp-svg2png'),
     compass = require('gulp-compass'),
     lr = require('tiny-lr')(),
     express = require('express'),
@@ -12,13 +13,24 @@ var EXPRESS_PORT = 4000;
 var EXPRESS_ROOT = __dirname;
 var LIVERELOAD_PORT = 35729;
 var watching = false;
-var svg = svgSprites.svg;
-var png = svgSprites.png;
 var spriteConfig = {
-    className: "icon-%f",
-    cssFile: "../sass/base/_sprites.scss",
-    pngPath: "../images/%f",
-    svgPath: "../images/%f"
+    shape: {
+        spacing: {
+            padding: 10
+        }
+    },
+    mode: {
+        css: {         
+            bust: false,
+            dest: '',
+            sprite: 'images-source/sprite.css.svg',
+            render: {
+                scss: {
+                    dest: 'sass/base/_sprites.scss'
+                }
+            }
+        }
+    }
 };
 var compassConfig = {
     config_file: 'config.rb',
@@ -64,9 +76,14 @@ gulp.task('compass', function() {
 // Configure Compass Sprite Task 
 gulp.task('sprites', function () {
     gulp.src('images-source/sprites/icons-misc/*.svg')
-        .pipe(svg(spriteConfig))
-        .pipe(gulp.dest("images"))
-        .pipe(png());
+        .pipe(svgSprite(spriteConfig))
+        .pipe(gulp.dest(''));
+});
+
+gulp.task('svg2png', function () {
+    gulp.src(['images-source/*.svg', '!images-source/sprites/*.svg'])
+        .pipe(svg2png())
+        .pipe(gulp.dest('images'));
 });
  
  
@@ -78,6 +95,7 @@ gulp.task('watch', function() {
     // gulp.watch('css/*.css', notifyLivereload);
     // gulp.watch('js/*.js', notifyLivereload);
     gulp.watch('images-source/sprites/icons-misc/*.svg', ['sprites']);
+    gulp.watch('images-source/*.svg', ['svg2png']);
     gulp.watch('sass/**/*.scss', ['compass']);
 });
  
