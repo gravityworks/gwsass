@@ -1,0 +1,29 @@
+/*
+<div class="media-block">
+  <div class="mb-img-left"><img src=""></div>
+  <div class="mb-text"><p></p></div>
+</div>
+*/
+
+.media-block {
+  @include float-clear;
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+.mb-text { 
+  overflow: hidden;
+}
+%mb-img-base {
+  margin-bottom: ($margin/2);
+  display: block;
+}
+.mb-img-left {
+  @extend %mb-img-base;
+  float: left;
+  margin-right: $margin;
+}
+.mb-img-right {
+  @extend %mb-img-base;
+  float: right;
+  margin-left: $margin;
+}
