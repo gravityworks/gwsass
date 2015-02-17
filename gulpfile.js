@@ -16,7 +16,7 @@ var watching = false;
 var spriteConfig = {
     shape: {
         spacing: {
-            padding: 10
+            padding: 2
         }
     },
     mode: {

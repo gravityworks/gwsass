@@ -1,0 +1,6 @@
+%svg-common {
+  background-image: url(images/sprites.svg);
+  .no-svg & {
+    background-image: url(images/sprites.png);
+  }
+}
