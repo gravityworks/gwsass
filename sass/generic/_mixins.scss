@@ -23,6 +23,9 @@
     display: table;
   }
 }
+@mixin link-states {
+  &:hover, &:focus, &:active { @content; }
+}
 @mixin visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -36,6 +39,10 @@
   left: 50%;
   @include translate(-50%, -50%);
 }
-@mixin breakpoint($break) {
-  @media (min-width: $break) { @content; }
+@mixin breakpoint($break, $type: min-width) {
+  @if $type == min-width {
+    @media (min-width: $break) { @content; }
+  } @else {
+    @media (#{$type}: $break) { @content; }
+  }
 }
