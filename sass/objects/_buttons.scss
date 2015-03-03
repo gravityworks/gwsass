@@ -1,8 +1,27 @@
 /*
 * Button Styles
 */
+ 
+/*
+  <span class="button-group">
+   <a href="" class="button"></a>
+   <a href="" class="button"></a>
+  </span>
+*/
+
 .button, %button {
 	display: inline-block;
 	border: none;
 	text-decoration: none;
+}
+
+.button-group {
+  @include float-clear;
+  display: block;
+  margin-top: -10px;
+  .button {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
 }
