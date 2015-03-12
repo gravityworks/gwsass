@@ -39,6 +39,18 @@
   left: 50%;
   @include translate(-50%, -50%);
 }
+@mixin has-dynamic-ratio($hight-to-width-percentage) {
+  position: relative;
+  padding-bottom: $hight-to-width-percentage;
+  height: 0;
+  .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 @mixin breakpoint($break, $type: min-width) {
   @if $type == min-width {
     @media (min-width: $break) { @content; }

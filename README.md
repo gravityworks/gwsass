@@ -75,3 +75,17 @@ You can also specify a column to float to the right using the 'last' option.
 }
 ```
 
+## Using Dynamic Ratios
+The 'has-dynamic-ratio' mixin lets you create a flexible, fixed-ratio container. You'll usually use this for SVGs.
+Ex:
+```scss
+.my-ratio-box {
+	@include has-dynamic-ratio(71%);
+}
+```
+where 70% = the height of the contained item / its width
+```html
+<div class="my-ratio-box">
+<div>your svg</div>
+</div>
+```
