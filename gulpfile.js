@@ -2,7 +2,9 @@
 var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     svg2png = require('gulp-svg2png'),
-    compass = require('gulp-compass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    sass = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
     lr = require('tiny-lr')(),
     express = require('express'),
     app = express();
@@ -68,9 +70,26 @@ gulp.task('startLivereload', function() {
   lr.listen(LIVERELOAD_PORT);
 });
  
-gulp.task('compass', function() {
-    gulp.src('sass/**/*.scss')
-        .pipe(compass(compassConfig).on("error", onError));
+// gulp.task('compass', function() {
+//     gulp.src('sass/**/*.scss')
+//         .pipe(compass(compassConfig).on("error", onError));
+// });
+
+// compile and compress sass (plus susy and sass-globbing)
+// add vendor prefixes and source map
+gulp.task('sass', function() {
+    return sass('sass', {
+        require: ['susy', 'sass-globbing'],
+        style: 'compressed',
+        sourcemap: true
+    })
+    .on("error", onError)
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions', 'ie 8', 'ie 9'],
+            cascade: false
+        }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(''));
 });
  
 // Configure Compass Sprite Task 
@@ -96,7 +115,7 @@ gulp.task('watch', function() {
     // gulp.watch('js/*.js', notifyLivereload);
     gulp.watch('images-source/sprites/icons-misc/*.svg', ['sprites']);
     gulp.watch('images-source/*.svg', ['svg2png']);
-    gulp.watch('sass/**/*.scss', ['compass']);
+    gulp.watch('sass/**/*.scss', ['sass']);
 });
  
 // Default Task
