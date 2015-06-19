@@ -1,0 +1,29 @@
+/*
+<div class="media-block">
+  <div class="mb-img-left"><img src=""></div>
+  <div class="mb-text"><p></p></div>
+</div>
+*/
+
+@mixin media-block($clear-margins: true) {
+  @include float-clear;
+  .mb-text { 
+    overflow: hidden;
+    @if $clear-margins == true {
+      @include no-first-last-margin;
+    }
+  }
+  .mb-img-left,
+  .mb-img-right {
+    margin-bottom: ($margin/2);
+    display: block;
+  }
+  .mb-img-left {
+    float: left;
+    margin-right: $margin;
+  }
+  .mb-img-right {
+    float: right;
+    margin-left: $margin;
+  }
+}
