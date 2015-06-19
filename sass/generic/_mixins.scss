@@ -26,6 +26,14 @@
 @mixin link-states {
   &:hover, &:focus, &:active { @content; }
 }
+@mixin no-first-last-margin {
+  >*:first-child {
+    margin-top: 0;
+  }
+  >*:last-child {
+    margin-bottom: 0;
+  } 
+}
 @mixin visually-hidden {
   position: absolute !important;
   height: 1px;
