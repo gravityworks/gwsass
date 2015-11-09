@@ -1,0 +1,39 @@
+/* 
+Example:
+<div class="media-block">
+  <div class="media__media"><img src=""></div>
+  <div class="media__body"><p></p></div>
+</div>
+*/
+
+@mixin media {
+  display: flex;
+  .no-flexbox & {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+
+@mixin media__media($width: auto) {
+  text-align: center;
+  width: $width;
+  .no-flexbox {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+@mixin media__body($left-padding: $margin) {
+  @if $left-padding != none {
+    padding-left: $left-padding;  
+  }
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  .no-flexbox {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

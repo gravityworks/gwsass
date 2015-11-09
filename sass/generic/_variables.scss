@@ -9,6 +9,7 @@
 /* Sizes */
 $max-width: 1200px;
 $margin: 80px;
+$margin-half: ($margin/2);
 
 
 /* Typography */
@@ -19,4 +20,4 @@ $line-height: 1.6;
 
 
 /* Breakpoints */
-$mobile: 600px;
+$br-med: 720px;

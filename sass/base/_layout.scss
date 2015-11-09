@@ -1,7 +1,74 @@
+// flex containers
 .container {
-	@include container($max-width);
-	@extend %float-clear;
-	.container {
-		margin: 0 -20px;
-	}
+  @include float-clear;
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 $margin-half;
+  box-sizing: border-box;
+  .container {
+    width: auto;
+    margin: 0 (-$margin-half);
+  }
+}
+
+// flex rows
+.flex-row {
+  @include flex-row;
+  margin-left: -$margin-half;
+  margin-right: -$margin-half;
+}
+.flex-row--center {
+  align-items: center;
+}
+.flex-row--left {
+  justify-content: flex-start;
+}
+
+
+// flex items
+%flex-item {
+  @include flex-item;
+  padding-left: $margin-half;
+  padding-right: $margin-half;
+}
+.flex-half {
+  @extend %flex-item;
+  @include breakpoint($br-med) {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+.flex-third {
+  @extend %flex-item;
+  @include breakpoint($br-med) {
+    width:(100%/3);
+    max-width:(100%/3);
+  }
+}
+
+// fallbacks – ¡¡¡needs modernizr!!!
+.no-flexbox:not(.flexboxtweener) {
+  .flex-row {
+    @include float-clear;
+  }
+
+  .flex-half,
+  .flex-third {
+    float: left;
+  }
+
+  @include breakpoint($br-med) {
+    .flex-half {
+      &:nth-child(2n+3){
+        clear: both;
+      }
+    }
+    .flex-third {
+      &:nth-child(3n+4){
+        clear: both;
+      }
+    }
+  }
 }
