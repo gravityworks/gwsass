@@ -3,16 +3,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   -ms-flex-pack: center;
 }
 
-@mixin flex-item{
-  box-sizing: border-box;
-  flex: 0 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+@mixin flex-item {
   width: 100%;
-  max-width: 100%
+  max-width: 100%;
 }

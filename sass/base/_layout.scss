@@ -47,6 +47,11 @@
     max-width:(100%/3);
   }
 }
+.flex-item--full-height {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+}
 
 // fallbacks – ¡¡¡needs modernizr!!!
 .no-flexbox:not(.flexboxtweener) {
