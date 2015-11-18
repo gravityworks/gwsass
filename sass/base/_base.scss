@@ -2,11 +2,8 @@
    Base
    ========================================================================== */
 
-* {
-   @extend %box-sizing;
-   &:before, &:after {
-      @extend %box-sizing;
-   }
+*, *:after, *:before {
+    box-sizing: inherit;
 }
 
 /**
@@ -20,6 +17,7 @@ html {
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 /**
