@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  -ms-flex-pack: center;
+  -ms-flex-pack: start;
 }
 
 @mixin flex-item {
