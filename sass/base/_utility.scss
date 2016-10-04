@@ -12,7 +12,12 @@ img.float-left  { margin: 0 $margin $margin 0; }
 .align-left     { text-align: left; }
 .align-center   { text-align: center; }
 img.max-width   { width: 100%; height: auto; }
-
+.no-margin        { margin: 0 !important; }
+.no-margin-top    { margin-top: 0; }
+.no-margin-bottom { margin-bottom: 0; }
+.box-margin-sm    { margin-top: $margin-half; margin-bottom: $margin-half; }
+.no-padding	{ padding: 0 !important; }
+.text-uppercase { text-transform: uppercase; }
 
 .visually-hidden, %visually-hidden {
 	@include visually-hidden;
@@ -39,4 +44,9 @@ img.max-width   { width: 100%; height: auto; }
 	position: absolute;
 	content: '';
 	display: inline-block;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }

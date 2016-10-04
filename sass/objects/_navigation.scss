@@ -1,0 +1,22 @@
+.skip-nav {
+	&:focus {
+		height: auto;
+		width: 100%;
+		left: 0;
+		top: 0;
+		display: block;
+		overflow: auto;
+		clip: auto;
+		z-index: 50;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+		padding: 10px;
+		// background-color: $darkblue; TODO add your color variable and uncomment
+		font-weight: 700;
+		a {
+			color: #fff;
+			@include reverse-hover-link;
+		}
+	}
+}

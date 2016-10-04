@@ -45,6 +45,20 @@
     max-width:(100%/3);
   }
 }
+.flex-two-third {
+  @extend %flex-item;
+  @include breakpoint($br-med) {
+    width:(200%/3);
+    max-width:(200%/3);
+  }
+}
+.flex-quarter {
+  @extend %flex-item;
+  @include breakpoint($br-med) {
+    width: 25%;
+    max-width: 25%;
+  }
+}
 .flex-item--full-height {
     display: flex;
     align-self: stretch;
@@ -57,7 +71,9 @@
   }
 
   .flex-half,
-  .flex-third {
+  .flex-third,
+  .flex-two-third,
+  .flex-quarter {
     float: left;
   }
 
@@ -69,6 +85,11 @@
     }
     .flex-third {
       &:nth-child(3n+4){
+        clear: both;
+      }
+    }
+    .flex-quarter {
+      &:nth-child(4n+5){
         clear: both;
       }
     }

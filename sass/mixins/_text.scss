@@ -1,0 +1,46 @@
+@mixin font-size($sizeValue: 1){
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+@mixin font-smoothing{
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+@mixin no-text-selection {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// links
+@mixin link-states {
+  &:hover, &:focus, &:active { @content; }
+}
+@mixin light-link {
+  color: #fff;
+  &:hover, &:focus, &:active { color: #fff; }
+}
+@mixin gray-link {
+  color: $light-gray;
+  &:hover, &:focus, &:active { color: $light-gray; } 
+}
+@mixin lime-link {
+  color: $lime;
+  &:hover, &:focus, &:active { color: $lime; }
+}
+@mixin reverse-hover-link {
+  text-decoration: none;
+  @include link-states {
+    text-decoration: underline;
+  }
+}
+
+// lists
+@mixin plain-list {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}

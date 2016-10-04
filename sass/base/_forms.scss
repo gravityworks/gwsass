@@ -172,3 +172,11 @@ textarea {
 optgroup {
   font-weight: bold;
 }
+
+// addition for form inputs with consistent height, e.g. contact form or login page
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  max-width: 100%;
+  min-height: 40px;
+}

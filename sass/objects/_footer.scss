@@ -1,3 +1,51 @@
-/*
-* Footer
-*/
+// gw link
+$gear-icon-size: 32px;
+
+.gw-link {
+	position: relative;
+	display: inline-block;
+	padding: 2px 0; // for icon
+	padding: 20px 0;
+	// color: $semidarkgray; TODO edit the color variable you need and uncomment
+	span {
+		display: inline-block;
+	}
+	@include link-states {
+		.gw-gear {
+			transform: rotate(225deg);
+		}
+		.gw-text {
+			text-decoration: underline;
+		}
+	}
+	.ext {
+		display: none;
+	}
+}
+
+.gw-text {
+	padding-left: ($gear-icon-size + 10px);
+	text-align: left;
+	@include font-size(12);
+	br {
+		line-height: 0;
+	}
+	@include breakpoint(400px){
+		br {
+			display: none;
+		}
+	}
+}
+
+.gw-gear {
+	//@extend .icon-gear;
+	// background: url('../images/gw-gear.svg') no-repeat; TODO upload this image to your project
+	width: 32px;
+	height: 32px;
+	transition: transform 0.3s ease-in-out;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -($gear-icon-size/2);
+}
