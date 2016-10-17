@@ -2,14 +2,14 @@
   "name": "gwsass",
     "version": "0.1.0",
     "devDependencies": {
-    "connect-livereload": "^0.4.0",
-    "express": "^4.4.4",
-    "gulp": "^3.8.1",
-    "gulp-autoprefixer": "~3.1.0",
-    "gulp-ruby-sass": "~1.0.0-alpha.3",
-    "gulp-sourcemaps": "~1.5.1",
-    "gulp-svg-sprite": "~1.0.13",
-    "gulp-svg2png": "~0.3.0",
-    "tiny-lr": "0.0.7"
+      "gulp": "^3.8.1",
+      "gulp-autoprefixer": "~3.1.0",
+      "gulp-imagemin": "^3.0.3",
+      "gulp-ruby-sass": "~1.0.0-alpha.3",
+      "gulp-sourcemaps": "~1.5.1",
+      "gulp-svg-sprite": "~1.0.13",
+      "gulp-svg2png": "~0.3.0",
+      "gulp-uglify": "^2.0.0",
+      "imagemin-pngquant": "^5.0.0"  
   }
 }
