@@ -39,7 +39,8 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip-path: inset(1px, 1px, 1px, 1px);
+  clip-path: inset(1px 1px 1px 1px);
+  white-space: nowrap;
 }
 @mixin centerer {
   position: absolute;
